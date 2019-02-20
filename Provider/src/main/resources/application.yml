@@ -1,0 +1,27 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+spring:
+  application:
+    name: qfprovider
+#  rabbitmq:
+#    host: 119.23.38.219
+#    port: 5762
+#    username: admin
+#    password: 123456
+#  cloud:
+#    bus:
+#      trace:
+#        enabled: true
+#      enabled: true
+server:
+  port: 13000
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

@@ -1,0 +1,13 @@
+#Eureka客户端设置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+#设置名称
+spring:
+  application:
+    name: ribbon-customer
+#设置端口号
+server:
+  port: 8802

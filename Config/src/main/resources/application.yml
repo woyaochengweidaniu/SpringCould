@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/woyaochengweidaniu/springcould # 配置git仓库的地址
+          search-paths: config-client-dev.yml,config-client-test.yml,config-client-prod.yml # git仓库地址下的相对地址，可以配置多个，用,分割。
+server:
+  port: 12000
+#将配置中心也注册成服务实现高可用
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
